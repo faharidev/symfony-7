@@ -22,7 +22,7 @@ class Conference
     private ?string $year = null;
 
     #[ORM\Column]
-    private ?bool $isInternational = null;
+    private bool $isInternational = true;
 
     /**
      * @var Collection<int, Comment>
@@ -69,7 +69,7 @@ class Conference
         return $this->isInternational;
     }
 
-    public function setInternational(bool $isInternational): static
+    public function setIsInternational(bool $isInternational): static
     {
         $this->isInternational = $isInternational;
 
